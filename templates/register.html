@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MessMitra | Create Account</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #dff5e5, #a8dfbd);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .register-box {
+            background: white;
+            padding: 35px;
+            width: 360px;
+            border-radius: 18px;
+            box-shadow: 0 8px 30px #0002;
+            text-align: center;
+        }
+
+        h1 {
+            color: #16834a;
+        }
+
+        input {
+            width: 100%;
+            padding: 13px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            background: #16834a;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #106638;
+        }
+
+        a {
+            color: #16834a;
+        }
+
+        .message {
+            color: #c0392b;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="register-box">
+
+        <h1>🍃 MessMitra</h1>
+        <h3>Create Your Account</h3>
+        <p>Join the smart food management community!</p>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% for category, message in messages %}
+                <p class="message">{{ message }}</p>
+            {% endfor %}
+        {% endwith %}
+
+        <form method="POST" action="{{ url_for('register') }}">
+
+            <input
+                type="text"
+                name="name"
+                placeholder="Full Name"
+                required
+            >
+
+            <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                required
+            >
+
+            <input
+                type="password"
+                name="password"
+                placeholder="Create Password (minimum 8 characters)"
+                minlength="8"
+                required
+            >
+
+            <button type="submit">Create Account</button>
+
+        </form>
+
+        <p>Already have an account?
+            <a href="{{ url_for('login') }}">Login</a>
+        </p>
+
+    </div>
+</body>
+</html>

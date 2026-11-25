@@ -1,0 +1,82 @@
+
+<!-- ANALYTICS -->
+<section class="content-section" id="analytics">
+
+    <div class="section-heading">
+        <div>
+            <p class="eyebrow">MEASURE YOUR IMPACT</p>
+            <h2>📊 Food Impact Analytics</h2>
+            <p>Understand preparation, consumption and waste trends.</p>
+        </div>
+    </div>
+
+    <div class="analytics-stats">
+
+        <div class="analytics-stat">
+            <span>🍱 Total Prepared</span>
+            <h2 id="totalPrepared">0</h2>
+            <small>Portions</small>
+        </div>
+
+        <div class="analytics-stat">
+            <span>🍽️ Total Consumed</span>
+            <h2 id="totalConsumed">0</h2>
+            <small>Portions</small>
+        </div>
+
+        <div class="analytics-stat">
+            <span>♻️ Total Wasted</span>
+            <h2 id="totalWasted">0</h2>
+            <small>Portions</small>
+        </div>
+
+        <div class="analytics-stat">
+            <span>🌱 Utilization Rate</span>
+            <h2 id="utilization">0%</h2>
+            <small>Food utilization</small>
+        </div>
+
+    </div>
+
+    <div class="green-score-card">
+        <div>
+            <p class="eyebrow">SUSTAINABILITY PERFORMANCE</p>
+            <h3>🌱 Green Mess Score</h3>
+            <p>Your mess's food utilization performance.</p>
+        </div>
+
+        <div class="score-display">
+            <strong id="analyticsScore">0</strong>
+            <span>/100</span>
+        </div>
+
+        <div class="score-track">
+            <div id="scoreProgress" class="score-progress"></div>
+        </div>
+    </div>
+
+    <div class="analytics-grid">
+
+        <div class="feature-card analytics-chart-card">
+            <h3>📈 Daily Food Trends</h3>
+            <p>Prepared, consumed and wasted portions.</p>
+            <div class="chart-container">
+                <canvas id="impactChart"></canvas>
+            </div>
+        </div>
+
+        <div class="feature-card analytics-chart-card">
+            <h3>🍽️ Food Utilization</h3>
+            <p>Consumed versus wasted food.</p>
+            <div class="chart-container">
+                <canvas id="utilizationChart"></canvas>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="analyticsMessage" class="analytics-message">
+        Loading analytics...
+    </div>
+
+</section>
